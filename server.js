@@ -15,18 +15,18 @@ const server = new Koa();
  * Add here only development middlewares
  */
 if (isDevelopment) {
-  server.use(logger);
+	server.use(logger);
 }
 
 /**
  * Pass to our server instance middlewares
  */
 server
-  .use(errorHandler)
-  .use(helmet)
-  .use(compress)
-  .use(cors)
-  .use(bodyParser);
+	.use(errorHandler)
+	.use(helmet)
+	.use(compress)
+	.use(cors)
+	.use(bodyParser);
 
 /**
  * Apply to our server the api router
